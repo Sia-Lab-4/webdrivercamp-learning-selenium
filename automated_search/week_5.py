@@ -40,7 +40,7 @@ for header in first_two_visible_headers:
 
     header_inside = wait.until(expected_conditions.presence_of_element_located((By.XPATH, "//h1[@class='x-item-title__mainTitle']")))
     price_inside = driver.find_element(By.XPATH, "//div[@class='x-price-primary']")
-    # print(f"NEW {header_inside.text}, {price_inside.text}")
+
     elems_on_item_page.append({
         "title": header_inside.text,
         "price": price_inside.text[3:]
